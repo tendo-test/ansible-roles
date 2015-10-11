@@ -3,5 +3,5 @@
    sudo: True
    gather_facts: False
    roles:
-     - common
      - users-with-github-key
+     - awscli
