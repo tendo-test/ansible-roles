@@ -9,8 +9,6 @@
 
  - name: Copy the configuration file (my.cnf)
    template: src=my.cnf.j2 dest=/etc/mysql/my.cnf
-   notify:
-     - Restart MySQL
 
  - name: Update MySQL root password for all root accounts 
    mysql_user: name=root host={{ item }} password={{ mysql_root_pass }} state=present
@@ -31,5 +29,3 @@
  
  - name: Remove the test database
    mysql_db: name=test state=absent
-   notify:
-     - Restart MySQL 
