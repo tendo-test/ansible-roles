@@ -10,14 +10,6 @@
      name: awscli 
      state: latest
 
- - name: Enable TAB completion for awscli
-   lineinfile:
-     dest: "/home/{{ item.username }}/.bashrc"
-     line: "complete -C aws_completer aws"
-     state: "{{ item.state | default('present') }}"
-   with_items:
-     awscli_users
-
  - name: Ensure .aws directory under user home for awscli config 
    file:  
      path: "/home/{{ item.username }}/.aws"
