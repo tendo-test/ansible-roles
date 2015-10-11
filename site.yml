@@ -3,4 +3,5 @@
    sudo: True
    gather_facts: True
    roles:
-     - LEMP
+     - common
+     - users-with-github-key
