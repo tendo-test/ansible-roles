@@ -5,3 +5,4 @@
    roles:
      - users-with-github-key
      - common
+     - wordpress
