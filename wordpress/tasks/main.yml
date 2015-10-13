@@ -1,5 +1,5 @@
 --- 
- - debug: "{{ website_name }}"
+ - debug: msg="{{ website_name }}"
  
  - name: Delete the html directory
    file: path=/var/www/html state=absent recurse=no
